@@ -1,8 +1,11 @@
 # open-source_toolbox
-# 🚀 Welcome to [Your Name]'s Toolbox!
+# Welcome to my Open Source Toolbox!
 
 ## 🌟 About Me
-Hey there! I'm a young Analytics Engineer, diving deep into the realms of data analysis, data science, and data engineering. Navigating through the intersection of these domains, I've executed projects that showcase the synergy of data processing, analysis, and predictive modeling. Through this repository, I aim to share my toolbox – a compilation of handy code snippets and utilities that make the everyday life of a data professional a tad easier.
+Hey there! I'm a young Analytics Engineer, diving deep into the realms of data analysis, data science, and data engineering. Navigating through the intersection of these domains, I've executed projects that showcase the synergy of data processing, analysis, and predictive modeling. Through this repository, I aim to share my toolbox – a compilation of handy code snippets and utilities that make the everyday life of a data professional a tad easier. 
+
+## ⚠️ Warning
+This code has never been used in any of the client projects I've been involved with. It has been developed in my free time, and I hold 100% ownership of it.
 
 ## 🛠 Toolbox Contents
 - **Audio Segmenter**: A Python script to chop up lengthy audio recordings into manageable 30-minute chunks. Ideal for transcription or easier manual analysis.
