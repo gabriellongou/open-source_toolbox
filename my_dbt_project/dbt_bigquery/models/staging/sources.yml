@@ -1,0 +1,6 @@
+sources:
+  - name: covid19_symptom_search
+    database: bigquery-public-data
+    schema: covid19_symptom_search
+    tables:
+      - name: symptom_search_country_weekly
