@@ -1,7 +1,7 @@
 # Audio Transcript Tool
 
 ## Overview
-Tired of writing meeting reports? With the **Audio Transcript Tool**, you can easily transcribe your audio recordings from meetings, lectures, interviews, and more. This tool is designed to efficiently extract a segment of an audio file starting from the 30-minute mark and then transcribe it into a readable text format.
+Tired of writing meeting reports? With the **Audio Transcript Tool**, you can easily transcribe your audio recordings from meetings, lectures, interviews, and more. You just need to record it (with the authorization of stakeholders). This tool is designed to efficiently extract a segment of an audio file starting from the 30-minute mark and then transcribe it into a readable text format. This cut is necessary to use OpenAi Whisper API.
 
 The tool utilizes two main libraries:
 - **OpenAI**: For audio transcription.
@@ -9,7 +9,7 @@ The tool utilizes two main libraries:
 
 ## Prerequisites
 1. You need to have Python installed on your machine.
-2. An OpenAI account to use the transcription API.
+2. An OpenAI account to use the transcription API. (Espacially a OpenAI Key)
 3. Install `ffmpeg` to help `pydub` process audio files.
 
 ## Installation of ffmpeg
@@ -25,17 +25,8 @@ The tool has two main parts:
 
 1. **Audio Segmentation**: 
     - The audio file (`my_full_audio.m4a`) is loaded.
-    - The audio segment starting from the 30-minute mark until the end is extracted and saved as `my_audio_30_first_minutes.mp3`.
+    - The audio segment starting from the beginning to 30-minute steps  until the end is extracted and saved as `my_audio_segment_XXX.mp3`.
 
 2. **Transcription**:
-    - The extracted audio file (`my_audio_30_first_minutes.mp3`) is transcribed using OpenAI's Whisper ASR system.
-    - The transcript is saved to a `.txt` file named `transcript30-end.txt`.
-
-## Usage
-1. Make sure your audio file is named `my_full_audio.m4a` and is in the same directory as the script.
-2. Run the script.
-3. The transcribed text will be saved in `transcript30-end.txt`.
-
-## Known Limitations
-- The tool currently assumes the audio file format to be `.m4a` for input. If you have another format, minor adjustments might be necessary.
-- The transcription accuracy might vary based on the audio quality and clarity of speech.
+    - The extracted audio file (`my_audio_segment_XXX.mp3`) is transcribed using OpenAI's Whisper ASR system.
+    - The transcript is saved to a `.txt` file named `my_audio_segment_XXX.txt`.
