@@ -1,0 +1,11 @@
+jobs:
+    - name: get_data
+      command: python get_data/get_data.py
+      shell: /bin/bash
+      schedule: "* * * * *"
+      utc: true
+      failsWhen:
+        producesStdout: false
+        producesStderr: false
+        nonzeroReturn: true
+        always: false

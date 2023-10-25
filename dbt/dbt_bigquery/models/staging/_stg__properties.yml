@@ -3,4 +3,5 @@ version: 2
 models:
   - name: symptom_search_country_weekly
     config:
+      materialized: table
       tags: ['long covid search']
